@@ -1,0 +1,51 @@
+%!TEX root=../paper.tex
+
+\section{Illustrating the Syntax}
+
+Polite, the language that we propose here, is a variant of Smalltalk that started as an experiment in syntax. It is derived from Smalltalk to which we add sentence case identifiers, first class functions, and the concept of a program. 
+
+In Smalltalk the syntax for sending a message with no arguments to an object is very elegantly implemented by simply separating the two entities with a space. If we have an object that represents a hero in a role playing game, we could send a message to it like this: 
+
+\begin{minted}{Python} 
+politeHero rechargeEnergy.
+\end{minted} 
+
+In order to replace identifiers with sentences, we need to make sure that our language grammar allows for the code to be parsed unambiguously. Since we allow space in the name of identifiers, we cannot use it anymore to separate the object and the message. Instead, in Polite, we use a comma to separate an agent’s name from the message that is sent to it, as in the sentence “Alfred, get the Batwing ready”. The previous code snippet becomes thus: 
+
+\begin{minted}{Python} 
+polite hero, recharge energy. 
+\end{minted}
+
+Note that all the words in an identifier including the spaces but excluding the last space are relevant for the identity of the identifier.
+
+For the Smalltalkers out there, this smells like profanity, since `,’ is usually used as the concatenation operator for strings and other collections. It is worth noting though, that such a sentiment is misplaced since `,’ is not part of the core language, but rather is a simple message implemented in the Collection class. In Polite, we consequently overloaded the `+’ operator to take over the responsibilities of `,’.
+
+The Smalltalk grammar does not provide productions for programs or classes, since the programmer compiles a method at a time. We therefore introduce these productions to be able to write larger programs.
+
+
+A simple class would thus look like this:
+\newpage
+
+% $\lstinputlisting[language=Python]{polite-hero.polite}
+
+
+
+In the previous example we observe class and local variable declarations. This is another example where the original Smalltalk grammar has to be modified since the original separator between variable names used to be space. Now the separator is again `,’. However, we kept the pipe notation for variable declarations.
+
+Since Polite allows the definition of first class functions we can implement new control structures like the one we have used in the fight with: method: 
+
+\begin{minted}{Python}
+while neither: [self, is dead] nor: [an enemy, is dead] do: [...] 
+\end{minted}
+
+Such ad-hoc control structures can often improve the readability of program text as other languages like Grace have also shown. In our example, to illustrate the difference in readability, we show the equivalent method for fight with: written here in traditional Smalltalk:
+
+\begin{minted}{Smalltalk}
+fightWith: anEnemy
+((self isDead not) and: [anEnemy isDead not]) whileTrue: [
+    self throwAPunchAt: theEnemy.
+    theEnemy throwAPunchAt: self.
+]
+\end{minted}
+
+The highlighted line of code will be hard to read for beginners [citation about control structures in St being hard in general for beginners] and could even be error prone for advanced developers.  shows the usefulness of having first class functions. Especially since the control structures of Smalltalk turn out to puzzle beginners [citation needed]. 

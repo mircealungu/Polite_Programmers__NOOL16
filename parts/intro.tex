@@ -1,0 +1,16 @@
+%!TEX root=../paper.tex
+
+\section{Introduction}
+
+Polite is an evolution of the Smalltalk programming language that aims to encourage developers to think more about their programs as prose. The main mechanism by which Polite does this is what we define here as sentence case identifiers -- a naming convention that allows spaces in identifier names. Polite illustrates that it is possible to embed spaces in identifier names while still storing and editing programs as text. 
+
+Although spaces in identifiers have been used before in DSLs (e.g. Applescript, the Cucumber testing framework, Inform 7) or COBOL, the feature is unusual for a general purpose object-oriented text-based programming language. We suspect that the main reason for this is historical: spaces allow the scanner to easily tokenize the text in a traditional compiler backend architecture. We believe howevr, that easing the job of the programmer should come before easing the job of the scanner. 
+
+If a syntax like that of Polite will encourage developers to think more about their programs as prose, and thus maybe work just a little bit harder towards writing more beautiful and readable code, it would be worth investigating using sentence case identifiers in other languages. Indeed, since software developers spend the largest part of their time reading code rather than writing it, even the smallest increase in code readability is to be fought for and cherished.
+Some readers will argue that nobody in their right mind would use such long identifiers as we illustrated in the abstract. For those readers, we report three method names that can be found in popular open source programs written in one of the most popular programming languages at the moment: 
+
+\begin{itemize}
+	\item whenCallEnsureThatContextOverloadedShouldThrowIllegalThreadStateExceptionUsingSuppliedMessage (nakedobjects-4.0.0)
+	\item getPointcutParserSupportingSpecifiedPrimitivesAndUsingSpecifiedClassLoaderForResolution (aspectj-1.6.9)
+	\item disabledtestResolveCorrectDependenciesWhenDifferentDependenciesOnNewestVersionReplaced (maven-3.0)
+\end{itemize}

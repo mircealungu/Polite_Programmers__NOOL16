@@ -2,7 +2,8 @@
 
 Writing about Polite for: http://2016.splashcon.org/track/nool2016
 
-! Installation 
+*Installation*
+
 To get some of the required bibliography files run: 
 
     ./get-biblio.sh

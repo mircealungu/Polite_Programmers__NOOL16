@@ -1,8 +1,8 @@
 # papers-polite-nool
 
 About
------
-Writing about Polite for: http://2016.splashcon.org/track/nool2016
+=====
+Paper about Polite for: http://2016.splashcon.org/track/nool2016
 
 Installation
 ============

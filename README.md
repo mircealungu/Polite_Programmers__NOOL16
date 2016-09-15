@@ -7,20 +7,15 @@ Paper about Polite for: http://2016.splashcon.org/track/nool2016
 Installation
 ============
 
-External Bibliography Files
----------------------------
-
-To get some of the required bibliography files run: 
+Some of the required bibliography files are in another git repo. To get them run: 
 
     ./get-biblio.sh
 
-The `minted` package for syntax highlighting
---------------------------------------------
-The `minted` package has an external dependence to Pygments that you install with: 
+The `minted` package is used for syntax highlighting. To use it you need to run: 
 
     easy_install Pygments
     
-Once that's done, you compile with the -shell-escape option: 
+You must compile your document with the `-shell-escape option`: 
 
     pdflatex -shell-escape paper.tex 
 

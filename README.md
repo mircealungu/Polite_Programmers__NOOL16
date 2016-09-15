@@ -2,7 +2,7 @@
 
 Writing about Polite for: http://2016.splashcon.org/track/nool2016
 
-Note that the `minted` package has an external dependence that you install with: 
+Note that the `minted` package has an external dependence to Pygments that you install with: 
 
     easy_install Pygments
     

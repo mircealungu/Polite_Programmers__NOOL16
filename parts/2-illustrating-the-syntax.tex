@@ -2,7 +2,7 @@
 
 \section{Illustrating the Polite Syntax}
 
-To experiment with sentence case identifiers, we started from the grammar of Smalltalk-80 \cite{Gold83a} and we modified all the rules that involve identifiers to allow spaces in identifier names. During our experiments we discovered several other grammar modifications which were required or desirable. The resulting language we named Polite Smalltalk, or for short Polite.
+To experiment with sentence case identifiers, we started from the grammar of Smalltalk and we modified all the rules that involve identifiers to allow spaces in identifier names. Once this was done, we discovered several other grammar modifications which we considerd desirable. The resulting language we named Polite Smalltalk or for short, Polite. Others in the past have also started from Smalltalk and provided deltas to augment its syntax \cite{Born87}.
 
 In this section we discuss those modifications to the original  Smalltalk language that were performed to obtain Polite.
 
@@ -71,7 +71,7 @@ while neither: [self, is dead]
 	   do: [self, fight with: an enemy] 
 \end{minted}
 
-Such ad-hoc control structures can often improve the readability of program text as other languages like Grace have also argued \cite{Grace12}. To illustrate the difference in readability, compare the previous code with the equivalent traditional Smalltalk: 
+The possibility of defining such ad-hoc control structures, that other languages like Grace also have \cite{Grace12}, can often improve the readability of program text. This is especially beneficial for several of the conditional structures of Smalltalk, since a study by Stefik shows that they are not very intuitive for newcomers to the language \cite{Stef13}. To illustrate the difference in readability, compare the previous code with the equivalent traditional Smalltalk: 
 
 \begin{minted}{text}
 ((self isDead not) and: [anEnemy isDead not]) 

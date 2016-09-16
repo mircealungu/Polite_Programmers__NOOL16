@@ -19,3 +19,6 @@ You must compile your document with the `-shell-escape option`:
 
     pdflatex -shell-escape paper.tex 
 
+Alternatively, if you use Sublime Text, you can add the following in LaTeXTools.sublime-settings under `builder_settings`:
+
+    "options": ["-shell-escape"]

@@ -1,7 +1,11 @@
 %!TEX root=../paper.tex
 
+ % context-sensitive extension of PetitParser is used to define its grammar using parsing expressions
+
 \section{Implementation}
-Polite is implemented on top of Pharo Smalltalk and a context-sensitive extension of PetitParser is used to define its grammar using parsing expressions\cite{Kurs14a-ParsingContext}. The current implementation can be found online in the Zenodo data repository. The code examples from this paper are fragments of a larger example that can also be found in the Polite image available online \cite{kurs16-polite}. The image also contains a code editor that supports code highlighting as illustrated in Figure 1.
+Polite is implemented on top of Pharo Smalltalk. The language interpreter is built using a context-sensitive extension of PetitParser -- a parser combinator framework that uses the parsing expression grammar formalism \cite{Kurs14a-ParsingContext}. 
+
+The current implementation of Polite can be found online and downloaded from  the Zenodo data repository \cite{kurs16-polite}. The repository contains an image which includes the code for the language implementation, a suite of more than 450 unit tests, and a sytax-highlighting code editor that is pictured in Figure 1. 
 
 \begin{figure}[h]
 	\centering

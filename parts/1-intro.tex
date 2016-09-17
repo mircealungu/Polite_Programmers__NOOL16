@@ -3,7 +3,7 @@
 
 \section{Introduction}
 
-Polite is an evolution of the Smalltalk programming language that aims to encourage developers to think more about their programs as prose. The main mechanism by which Polite does this is what we define here as sentence case identifiers --- a naming convention that allows spaces in identifier names. Polite illustrates that it is possible to embed spaces in identifier names while still storing and editing programs as text. 
+Polite Smalltalk is a small evolutionary mutation of the Smalltalk programming language that aims to encourage developers to think more about their programs as prose. The main mechanism by which Polite does this is what we define here as {\em sentence case identifiers} --- a naming convention that allows spaces in identifier names. Unlike projection editors which can easily allow spaces in their identifiers, Polite programs are stored as text. 
 
 Although spaces in identifiers have been used before in DSLs (e.g. Applescript, the Cucumber testing framework, Inform 7) or COBOL, the feature is unusual for a general purpose object-oriented text-based programming language. We suspect that the main reason for this is historical: spaces allow the scanner to easily tokenize the text in a traditional compiler backend architecture. We are interested more in easying the job of the programmer instead.
 
@@ -13,16 +13,16 @@ We believe that sentence case identifiers could impact code readability and we h
 
 \begin{itemize}
 
-	\item A syntax like that of Polite will encourage developers to think more about their programs as prose. This might make them work just a little bit harder towards writing more understandable code. 
+	\item A syntax like that of Polite might encourage developers to think more about their programs as prose. This might make them work just a little bit harder towards writing more understandable code. 
 
-	\item It is possible that a system with sentence case identifiers could be perceived as more user friendly by beginners.
+	\item A system with sentence case identifiers might be perceived as more user friendly by beginners.
 
 \end{itemize}
 
 We believe that it is worth investigating these hypotheses, given the impact that even small increases in code readability could have on software development: it is well known that developers spend the vast majority of their time reading rather than writing source code.
 
 
-Some readers will argue that this is not a very serious problem, since programmers do not use identifiers as long as we illustrated in the abstract. For those readers, we report three method names that can be found in popular open source programs written in one of the most popular programming languages at the moment: 
+Some readers will argue that this is not a very serious problem, since programmers do not use identifiers as long as we illustrated in the abstract. For those readers, we present three method names that can be found in three popular open source programs written in Java, one of the most popular programming languages at the moment: 
 
 
 \begin{minted}[bgcolor=lbcolor]{text}

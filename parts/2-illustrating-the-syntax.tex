@@ -30,14 +30,15 @@ politeHero fightWith: anEnemy.
 \end{minted}
 
 
-If we want to allow spaces in the name of identifiers, we cannot use space to separate the object and the message. In Polite we introduce a comma to separate the name of an agent from the message that is receives, as one would do in natural language when instructing an agent to do something (e.g. {\em ``Alfred, get the Batwing ready''}). All the characters in an identifier including the spaces are relevant for its identity. The previous code snippets thus become: 
+If we want to allow spaces in the name of identifiers, we cannot use space to separate the object and the message. 
+In Polite we introduce a comma to separate the name of an agent from the message that is receives, as one would also do in natural language (e.g. {\em ``Alfred, get the Batwing ready''}). All the characters in an identifier including the spaces are relevant for its identity. The previous code snippets thus become: 
 
 \begin{minted}{text} 
 polite hero, recharge energy. 
 polite hero, fight with: an enemy.
 \end{minted}
 
-For the seasoned Smalltalkers, using \comma in this way might be offensive since it is traditionally used as the concatenation operator for strings and other collections. However, such a sentiment is misplaced since \comma is a simple message implemented in the Collection class. In Polite, we overload the \plus operator to take over the responsibilities of \comma.
+For the seasoned Smalltalkers, using a comma in this way might be anathema since the operator is traditionally used to concatenate strings and other collections. However, such a sentiment is misplaced since comma is just a simple message implemented in the Collection class. In Polite, the \plus operator takes over the responsibilities of \comma and is thus used to concatenate two collections.
 
 
 \subsection{Polite Programs}
@@ -73,7 +74,7 @@ while neither: [self, is dead]
 	   do: [self, fight with: an enemy] 
 \end{minted}
 
-The possibility of defining such ad-hoc control structures, that other languages like Grace or Scala also provide, can be used to improve the readability of program text. This is especially beneficial for several of the conditional structures of Smalltalk, since a study by Stefik shows that they are not very intuitive for newcomers to the language \cite{Stef13}. To illustrate the difference in readability, compare the previous code with the equivalent traditional Smalltalk: 
+The possibility of defining such ad-hoc control structures, that other languages like Grace or Scala also provide, can be used to improve the readability of program text. This is especially beneficial for several of the conditional structures of Smalltalk which were shown in a study by Stefik to be unintuitive for newcomers to the language \cite{Stef13}. To illustrate the difference in readability, compare the previous code with the equivalent traditional Smalltalk: 
 
 \begin{minted}{text}
 ((self isDead not) and: [anEnemy isDead not]) 

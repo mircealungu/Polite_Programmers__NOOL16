@@ -2,7 +2,7 @@
 
 \section{Illustrating the Polite Syntax}
 
-To experiment with sentence case identifiers, we started from the grammar of Smalltalk and we modified all the rules that involve identifiers to allow spaces in identifier names. Once this was done, we discovered several other grammar modifications which we considerd desirable. The resulting language we named Polite Smalltalk or for short, Polite. Others in the past have also started from Smalltalk and provided deltas to augment its syntax \cite{Born87}.
+To experiment with sentence case identifiers, we started from the grammar of Smalltalk and we modified all the rules that involve identifiers to allow spaces in identifier names. Once this was done, we discovered several other grammar modifications which we considerd desirable. We named the resulting language Polite Smalltalk or for short, Polite. Others in the past have also started from Smalltalk and provided deltas to augment its syntax \cite{Born87}.
 
 In this section we discuss those modifications to the original  Smalltalk language that were performed to obtain Polite.
 
@@ -30,7 +30,7 @@ politeHero fightWith: anEnemy.
 \end{minted}
 
 
-If we want to allow spaces in the name of identifiers, we cannot use space to separate the object and the message. In Polite we introduce a comma to separate the name of an agent from the message that is receives, as one would do in natural language when instructing an agent to do something (e.g. {\em ``Alfred, get the Batwing ready''}). All the characters in an identifier including the spaces become are relevant for its identity. The previous code snippets thus become: 
+If we want to allow spaces in the name of identifiers, we cannot use space to separate the object and the message. In Polite we introduce a comma to separate the name of an agent from the message that is receives, as one would do in natural language when instructing an agent to do something (e.g. {\em ``Alfred, get the Batwing ready''}). All the characters in an identifier including the spaces are relevant for its identity. The previous code snippets thus become: 
 
 \begin{minted}{text} 
 polite hero, recharge energy. 
@@ -44,9 +44,11 @@ For the seasoned Smalltalkers, using \comma in this way might be offensive since
 The Smalltalk grammar does not provide productions for programs or classes, since the programmer grows a program by compiling a method at a time in the Smalltalk IDE. 
 
 To be able to write programs independent of the Smalltalk IDE we introduce a new grammar rule for a program: a sequence of class and global method definitions, followed by code to be executed. The following code snippet presents a simple program with one class definition and a few lines of code: 
+\vspace{0.5em}
 
 \inputminted[bgcolor=lbcolor,linenos]{text}{polite-hero.polite}
 
+\vspace{0.5em}
 In the code snippet we see several other features of the language: 
 
 \begin{itemize}
@@ -55,7 +57,7 @@ In the code snippet we see several other features of the language:
 
 	\item Indentation based scoping is used for defining the body of a class and the body of a method. 
 
-	\item Class, program, and method local variable declarations (lines 2,17) are enumerated between pipes and must be separated by \comma (line 2)
+	\item Class, program, and method local variable declarations (lines~2 and 17) are enumerated between pipes and must be separated by~\comma (line 2)
 
 \end{itemize}
 

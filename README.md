@@ -5,7 +5,7 @@ Preprint
 
 About
 =====
-Paper was presented at the [NOOL (New Object Oriented Languages)](http://2016.splashcon.org/track/nool2016) workshop in 2016. Workshop was collocated with SPLASH. 
+Paper was presented at the [NOOL (New Object Oriented Languages)](http://2016.splashcon.org/track/nool2016) workshop in 2016. Workshop was collocated with SPLASH. Presents the idea of introducing "sentence case identifiers" in programming languages. 
 
 Installation
 ============

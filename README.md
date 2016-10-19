@@ -5,7 +5,7 @@ Preprint
 
 About
 =====
-Paper about Polite for: http://2016.splashcon.org/track/nool2016
+Paper was presented at the [NOOL (New Object Oriented Languages)](http://2016.splashcon.org/track/nool2016) workshop, collocated with SPLASH in Amsterdam, in 2016. 
 
 Installation
 ============
